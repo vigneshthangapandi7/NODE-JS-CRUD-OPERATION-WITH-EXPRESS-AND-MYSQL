@@ -1,0 +1,22 @@
+<html>
+    <body>
+    
+        <h1>
+            Update a New Product.
+        </h1>
+    
+        <form action="/updatepro" method="POST">
+            <input type="hidden" name="pro_id" value="<%= allDataproduct.product_id %>" id="cat_id"></br>
+    
+            New Product Name:
+            <input type="text" name="pro_name" id="pro_name" value="<%= allDataproduct.product_name %>"></br>
+
+            New Category Id:
+            <input type="text" name="cat_id" id="cat_id" value="<%= allDataproduct.category_id %>"></br>
+    
+            <button type="submit">Update Category</button>
+    
+        </form>
+    
+    </body>
+    </html>

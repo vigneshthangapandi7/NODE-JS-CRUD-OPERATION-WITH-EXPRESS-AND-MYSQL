@@ -1,0 +1,19 @@
+<html>
+    <body>
+    
+        <h1>
+            Update a New Category.
+        </h1>
+    
+        <form action="/updatecat" method="POST">
+            <input type="hidden" name="cat_id" value="<%= allData.category_id %>" id="cat_id"></br>
+    
+            New Category Name:
+            <input type="text" name="cat_name" id="cat_name" value="<%= allData.category_name %>"></br>
+    
+            <button type="submit">Update Category</button>
+    
+        </form>
+    
+    </body>
+    </html>

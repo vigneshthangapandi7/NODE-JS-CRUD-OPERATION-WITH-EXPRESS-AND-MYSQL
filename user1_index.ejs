@@ -1,0 +1,44 @@
+<html>
+
+<body>
+    <h1 style="text-align: center;">CATEGORIES AND PRODUCTS CRUDE OPERATIONS</h1>
+    <h2>
+        PRODUCT'S CRUD OPERATION'S
+    </h2>
+    <a href="/addproduct">Add New Product</a></br></br>
+    <table style="border: 2px solid black;">
+        <thead>
+            <tr>
+                <th style="border: 2px solid black;">PRODUCT ID</th>
+                <th style="border: 2px solid black;">PRODUCT NAME</th>
+                <th style="border: 2px solid black;">CATEGORY ID</th>
+                <th style="border: 2px solid black;">ACTION</th>
+            </tr>
+        </thead><br><br>
+
+        <tbody>
+            <% product_details.forEach(function(datas){ %>
+                <tr>
+                    <td>
+                        <%= datas.product_id %>
+                    </td>
+                    <td>
+                        <%= datas.product_name %>
+                    </td>
+
+                    <td>
+                        <%= datas.category_id %>
+                    </td>
+
+                    <td>
+                        <a href="editproduct/<%= datas.product_id %>">Edit</a>
+                        <a href="deleteproduct/<%= datas.product_id %>">Delete</a>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+
+</table>
+<a href="/">Category Opration</a>
+</body>
+</html>
